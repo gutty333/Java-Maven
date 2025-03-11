@@ -7,9 +7,9 @@ public class MavenDependencies {
 
         Dependency Scopes
 
-        Compile Scope = Default scope for all dependencies if otherwise not specified. Dependency is propagated, transient dependency
-        Provided Scope = Not common in cloud applications
-        Runtime Scope = Only needed for execution
+        Compile Scope = Default scope for all dependencies if otherwise not specified. Dependency is propagated, transient dependency. Needed for both compilation and runtime
+        Provided Scope = Not common in cloud applications, Basically for dependencies that required for compilation but will be available at runtime in the target environment where application will run.
+        Runtime Scope = Only needed for execution, but not compilation
         Test Scope = Only needed for testing. Available only for testing, you will see testing frameworks with this scope
 
 
@@ -69,6 +69,7 @@ public class MavenDependencies {
 
         Notice we are not concerned with scope or version, since it will be propagated from the parent
         This also works best with the enforcer build plugin, again it depends. you might want different versions for certain modules
+        Note best practice to only use the <dependencyManagement> element when working with modules
 
 
         mvn clean verify =  to analyze your POM structures
