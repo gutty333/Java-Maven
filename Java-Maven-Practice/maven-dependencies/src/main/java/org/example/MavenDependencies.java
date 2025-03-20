@@ -4,19 +4,27 @@ public class MavenDependencies {
     public static void main(String[] args) {
 
         /*
-
         Dependency Scopes
 
-        Compile Scope = Default scope for all dependencies if otherwise not specified. Dependency is propagated, transient dependency. Needed for both compilation and runtime
+        Compile Scope = Default scope for all dependencies if otherwise not specified. Dependency is propagated, transient dependency.
+        Needed for both compilation, runtime, and test
+        Basically my project needs this dependency during each stage
+
         Provided Scope = Not common in cloud applications, Basically for dependencies that required for compilation but will be available at runtime in the target environment where application will run.
+
         Runtime Scope = Only needed for execution, but not compilation
+
         Test Scope = Only needed for testing. Available only for testing, you will see testing frameworks with this scope
+        You don't need it for compiling or during runtime
+
+
 
 
 
 
 
         Transitive Dependencies
+        ------------------------------------------------------------------------------------------------------------------------------------
 
         Dependencies of dependencies = Will bring child dependencies that are needed
 
@@ -30,6 +38,7 @@ public class MavenDependencies {
 
 
         Dependency Management
+        ------------------------------------------------------------------------------------------------------------------------------------
 
         This object allows to better structure and control our module dependency management
         Essentially we have the Parent POM be our single source for shared dependencies, controlling the scope and versions
@@ -78,6 +87,7 @@ public class MavenDependencies {
 
 
         Dependency Goals
+        ------------------------------------------------------------------------------------------------------------------------------------
 
         mvn dependency:analyze =  The following command will analyze your dependencies and provide information or their usage
         mvn dependency:resolve

@@ -74,8 +74,17 @@ public class MavenBasic {
         Best practice is to order your dependencies by scope
 
 
-        groupId = is the organizational structure. Think of the folder/package structure for the library
-        artifactId = is the name of the dependency
+        groupId = is the organizational structure. Think of the folder/package structure for the library.
+        The company used package structure
+        It uses reverse domain name. For example if the organization is hello.net
+        The groupId will be = net.hello
+
+        artifactId = is the name of the dependency. In other words your project name
+
+        In the end this will help identify your unique project within the organization
+
+
+        External Libraries in your project structure folder will showcase all the dependencies you have downloaded for project
 
 
         ------------------------------------------------------------------------------------------------------------------------------------
